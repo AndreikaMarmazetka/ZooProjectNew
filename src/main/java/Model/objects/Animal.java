@@ -1,6 +1,4 @@
-package com.example.demo.objects;
-
-import com.example.demo.objects.info.animal.Type;
+package Model.objects;
 
 import java.lang.String;
 import java.sql.Time;
