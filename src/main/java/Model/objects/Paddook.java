@@ -3,10 +3,10 @@ package Model.objects;
 import java.util.List;
 
 public abstract class Paddook {
-    private String type;
-    private String food;
-    private boolean dengerous;
-    private List<Animal> compability;
+    protected String type;
+    protected String food;
+    protected boolean dengerous;
+    protected List<Animal> compability;
 
     public String getType() {
         return type;

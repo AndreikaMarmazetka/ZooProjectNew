@@ -5,14 +5,14 @@ import java.sql.Time;
 import java.util.List;
 
 public abstract class Animal {
-    private String type;
-    private int cost;
-    private String enviromentType;
-    private Paddook paddookType;
-    private List<Time> timingForCare;
-    private String status;
-    private String statusWay;
-    private String foodType;
+    protected String type;
+    protected int cost;
+    protected String enviromentType;
+    protected Paddook paddookType;
+    protected List<Time> timingForCare;
+    protected String status;
+    protected String statusWay;
+    protected String foodType;
 
 
     public String getType() {
