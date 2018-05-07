@@ -14,4 +14,7 @@ public class BuyServices {
     private BuyServices() {
     }
 
+    public void buy(int index) {
+
+    }
 }
