@@ -1,4 +1,4 @@
-package Model.objects.info.animal;
+package Model.objects.Lists.animals;
 
 public enum FoodType {
     Herbivorous("Herbivorous"),
@@ -12,7 +12,7 @@ public enum FoodType {
     }
 
     @Override
-    public String toString(){
+    public String toString() {
         return s;
     }
 }

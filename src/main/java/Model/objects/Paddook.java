@@ -2,11 +2,10 @@ package Model.objects;
 
 import java.util.List;
 
-public abstract class Paddook {
+public class Paddook {
     protected String type;
     protected String food;
     protected boolean dengerous;
-    protected List<Animal> compability;
 
     public String getType() {
         return type;
@@ -32,11 +31,5 @@ public abstract class Paddook {
         this.dengerous = dengerous;
     }
 
-    public List<Animal> getCompability() {
-        return compability;
-    }
 
-    public void setCompability(List<Animal> compability) {
-        this.compability = compability;
-    }
 }

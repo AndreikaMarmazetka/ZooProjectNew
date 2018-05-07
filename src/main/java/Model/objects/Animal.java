@@ -4,7 +4,7 @@ import java.lang.String;
 import java.sql.Time;
 import java.util.List;
 
-public abstract class Animal {
+public class Animal {
     protected String type;
     protected int cost;
     protected String enviromentType;
