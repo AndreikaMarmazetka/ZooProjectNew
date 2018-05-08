@@ -17,9 +17,8 @@ public class ZooApplication {
     public static void main(String[] args) {
         SpringApplication.run(ZooApplication.class, args);
         Scanner in = new Scanner(System.in);
-        System.out.print("Hello");
+
         ConnectionBD connection = ConnectionBD.getInstance();
         connection.Connect();
-
     }
 }
