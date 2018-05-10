@@ -31,15 +31,13 @@ public class ConnectionBD {
                     "postgres", "12345678");
 
             stmt = connection.createStatement();
-            String query = "SELECT * from Animals a LEFT JOIN AnimalType aty LEFT JOIN Environment en" +// ???
-                    "LEFT JOIN  ON";
+            String query = "";
             ResultSet rs = stmt.executeQuery(query);
             while (rs.next()) {
                 // create.createAnimal(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getString(4));
             }
 
-            String query2 = "SELECT * from Paddook a LEFT JOIN PaddookType aty LEFT JOIN Environment en" +// ???
-                    "LEFT JOIN  ON";
+            String query2 = "";
             ResultSet rs2 = stmt2.executeQuery(query2);
             while (rs2.next()) {
                 // create.createPaddook(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getString(4));

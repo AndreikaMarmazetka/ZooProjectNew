@@ -1,6 +1,7 @@
 package Model;
 
 import Model.Connect.ConnectionBD;
+import View.MainWindow;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -20,5 +21,12 @@ public class ZooApplication {
 
         ConnectionBD connection = ConnectionBD.getInstance();
         connection.Connect();
+
+
+     /*   MainWindow mainWindow = new MainWindow();
+        mainWindow.setVisible(true);
+        mainWindow.show();*/
     }
+
+
 }
