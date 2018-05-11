@@ -1,4 +1,4 @@
-package Model.objects.Lists.animals;
+package Model.objects.Lists;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +22,7 @@ public class Enviroments {
         return enviromentsList.get(i);
     }
 
-    public void AddListEnvironment(String str) {
+    public void addListEnvironment(String str) {
         enviromentsList.add(str);
     }
 }

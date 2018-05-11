@@ -1,17 +1,17 @@
-package Model.objects.Lists.animals;
+package Model.objects.Lists;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Status {
+public class StatusWay {
     private List<String> statusesList = new ArrayList<String>();
-    private static Status ourInstance = new Status();
+    private static StatusWay ourInstance = new StatusWay();
 
-    public static Status getInstance() {
+    public static StatusWay getInstance() {
         return ourInstance;
     }
 
-    private Status() {
+    private StatusWay() {
     }
 
     public int getSizeList() {

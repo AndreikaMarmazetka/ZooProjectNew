@@ -1,14 +1,12 @@
 package Model.Connect;
 
-import Model.create.objects.CreateAnimalAndPaddook;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import java.sql.ResultSet;
-import java.sql.Statement;
+
 
 public class ConnectionBD {
     private static ConnectionBD ourInstance = new ConnectionBD();
@@ -20,10 +18,7 @@ public class ConnectionBD {
     private ConnectionBD() {
     }
 
-    CreateAnimalAndPaddook create = new CreateAnimalAndPaddook();
-    Statement stmt;
-    Statement stmt2;
-    public void Connect() {
+    public boolean Connect() {
         Connection connection = null;
         try {
             connection = DriverManager.getConnection(
@@ -36,8 +31,10 @@ public class ConnectionBD {
 
         if (null != connection) {
             System.out.println("------ Подключение установлено ------");
+            return true;
         } else {
             System.out.println("------ Подключение НЕ установлено ------");
+            return false;
         }
 
 

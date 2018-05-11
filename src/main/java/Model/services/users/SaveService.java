@@ -8,5 +8,6 @@ public class SaveService {
     }
 
     private SaveService() {
+
     }
 }

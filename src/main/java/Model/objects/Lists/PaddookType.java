@@ -1,17 +1,17 @@
-package Model.objects;
+package Model.objects.Lists;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListTypePaddook {
+public class PaddookType {
     private List<String> ListTypePaddook = new ArrayList<String>();
-    private static ListTypePaddook ourInstance = new ListTypePaddook();
+    private static PaddookType ourInstance = new PaddookType();
 
-    public static ListTypePaddook getInstance() {
+    public static PaddookType getInstance() {
         return ourInstance;
     }
 
-    private ListTypePaddook() {
+    private PaddookType() {
     }
 
     public int getSizeList() {
@@ -22,7 +22,7 @@ public class ListTypePaddook {
         return ListTypePaddook.get(i);
     }
 
-    public void AddListTypePaddook(String str) {
+    public void addListTypePaddook(String str) {
         ListTypePaddook.add(str);
     }
 }

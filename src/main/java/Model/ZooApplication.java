@@ -19,8 +19,8 @@ public class ZooApplication {
         SpringApplication.run(ZooApplication.class, args);
         Scanner in = new Scanner(System.in);
 
-        ConnectionBD connection = ConnectionBD.getInstance();
-        connection.Connect();
+        // ConnectionBD connection = ConnectionBD.getInstance();
+        // connection.Connect();
 
 
      /*   MainWindow mainWindow = new MainWindow();
