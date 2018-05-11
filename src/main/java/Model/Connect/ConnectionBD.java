@@ -29,19 +29,6 @@ public class ConnectionBD {
             connection = DriverManager.getConnection(
                     "jdbc:postgresql://localhost:5432/Zoo",
                     "postgres", "12345678");
-
-            stmt = connection.createStatement();
-            String query = "";
-            ResultSet rs = stmt.executeQuery(query);
-            while (rs.next()) {
-                // create.createAnimal(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getString(4));
-            }
-
-            String query2 = "";
-            ResultSet rs2 = stmt2.executeQuery(query2);
-            while (rs2.next()) {
-                // create.createPaddook(rs.getString(1),rs.getInt(2),rs.getString(3),rs.getString(4));
-            }
         } catch (SQLException ex) {
             Logger.getLogger(ConnectionBD.class.getName()).log(
                     Level.SEVERE, null, ex);
