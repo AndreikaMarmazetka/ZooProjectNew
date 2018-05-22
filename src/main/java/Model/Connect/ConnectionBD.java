@@ -18,8 +18,10 @@ public class ConnectionBD {
     private ConnectionBD() {
     }
 
-    public boolean Connect() {
-        Connection connection = null;
+    Connection connection = null;
+
+    public void Connect() {
+
         try {
             connection = DriverManager.getConnection(
                     "jdbc:postgresql://localhost:5432/Zoo",
@@ -31,13 +33,14 @@ public class ConnectionBD {
 
         if (null != connection) {
             System.out.println("------ Подключение установлено ------");
-            return true;
         } else {
             System.out.println("------ Подключение НЕ установлено ------");
-            return false;
         }
 
+    }
 
+    public Connection getConnection() {
+        return connection;
     }
 }
 

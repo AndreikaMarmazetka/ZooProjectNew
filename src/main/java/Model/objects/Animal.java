@@ -8,7 +8,7 @@ public class Animal {
     protected String type;
     protected int cost;
     protected String enviromentType;
-    protected Paddook paddookType;
+    protected String paddookType;
     protected List<Time> timingForCare;
     protected String status;
     protected String statusWay;
@@ -39,11 +39,11 @@ public class Animal {
         this.enviromentType = enviromentType;
     }
 
-    public Paddook getPaddookType() {
+    public String getPaddookType() {
         return paddookType;
     }
 
-    public void setPaddookType(Paddook paddookType) {
+    public void setPaddookType(String paddookType) {
         this.paddookType = paddookType;
     }
 

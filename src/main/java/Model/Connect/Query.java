@@ -38,4 +38,6 @@ public class Query {
     final static public String updateStatusWay = "update Animal set status_way=";
     //final static public String updateAnimal
     //final static public String updatePaddook
+
+
 }
