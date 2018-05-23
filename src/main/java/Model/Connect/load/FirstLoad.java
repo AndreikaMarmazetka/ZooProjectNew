@@ -20,6 +20,18 @@ public class FirstLoad {
             loadAnimal(rs);
             rs = st.executeQuery(Query.loadPaddook);
             loadPaddook(rs);
+            rs = st.executeQuery(Query.loadAnimalType);
+            loadAnimalType(rs);
+            rs = st.executeQuery(Query.loadTiming);
+            loadTiming(rs);
+            rs = st.executeQuery(Query.loadStatusWay);
+            loadStatusWay(rs);
+            rs = st.executeQuery(Query.loadFood);
+            loadFood(rs);
+            rs = st.executeQuery(Query.loadEnviroment);
+            loadEnviroment(rs);
+            rs = st.executeQuery(Query.loadPaddookType);
+            loadPaddookType(rs);
 
         } catch (SQLException e) {
             e.printStackTrace();
@@ -80,6 +92,13 @@ public class FirstLoad {
         Enviroments e = Enviroments.getInstance();
         while (rs.next()) {
             e.addListEnvironment(rs.getString(1));
+        }
+    }
+
+    public void loadPaddookType(ResultSet rs) throws SQLException {
+        PaddookType e = PaddookType.getInstance();
+        while (rs.next()) {
+            e.addListTypePaddook(rs.getString(1));
         }
     }
 }
