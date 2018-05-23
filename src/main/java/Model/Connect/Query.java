@@ -1,5 +1,7 @@
 package Model.Connect;
 
+import java.sql.Time;
+
 public class Query {
     // ----------------------------------OnStartProgram--------------------
     final static public String loadAnimal = "Select a.id, at.type, a.cost, e.environment, pt.type," +
@@ -27,11 +29,31 @@ public class Query {
 
     //--------------------------------OnCreate---------------------------
 
-    final static public String addAnimal = "insert into Animals (id, type, cost, environment, paddook, timing, status, status_way, food) values";
-    final static public String addPaddook = "insert into Paddook (id, paddook_type, food, dangerous) values";
-    final static public String addAnimalType = "insert into AnimalTypes (id, type) values ";
-    final static public String addTiming = "insert into Timing (id, first, second, third, fourth, fifth) values ";
-    final static public String addPaddookType = "insert into PaddookTypes (id, type) values ";
+    public String addAnimal;
+    public String addPaddook;
+    public String addAnimalType;
+    public String addTiming;
+    public String addPaddookType;
+
+    public void createAddAnimalQuery(int id, int type, int cost, int environment, int paddook, int timing, String status, int status_way, int food) {
+        addAnimal = "insert into Animals (" + id + ", " + type + ", " + cost + ", " + environment + ", " + paddook + ", " + timing + ", " + status + ", " + status_way + ", " + food + ") values";
+    }
+
+    public void createAddPaddookQuery(int id, int paddook_type, int food, boolean dangerous) {
+        addPaddook = "insert into Paddook (" + id + ", " + paddook_type + ", " + food + ", " + dangerous + ") values";
+    }
+
+    public void createAddAnimalTypeQuery(int id, String type) {
+        addAnimalType = "insert into AnimalTypes (" + id + ", " + type + ") values ";
+    }
+
+    public void createAddTiming(int id, Time o, Time t, Time tr, Time fo, Time fi) {
+        addTiming = "insert into Timing (" + id + ", " + o + ", " + t + ", " + tr + ", " + fo + ", " + fi + ") values ";
+    }
+
+    public void createAddPaddookTypeQuery(int id, String type) {
+        addPaddookType = "insert into PaddookTypes (" + id + "," + type + ") values ";
+    }
 
     //------------------------------Update---------------------------
 

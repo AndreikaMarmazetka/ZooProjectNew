@@ -9,7 +9,7 @@ public class Animal {
     protected int cost;
     protected String enviromentType;
     protected String paddookType;
-    protected List<Time> timingForCare;
+    protected Timing timingForCare;
     protected String status;
     protected String statusWay;
     protected String foodType;
@@ -47,11 +47,11 @@ public class Animal {
         this.paddookType = paddookType;
     }
 
-    public List<Time> getTimingForCare() {
+    public Timing getTimingForCare() {
         return timingForCare;
     }
 
-    public void setTimingForCare(List<Time> timingForCare) {
+    public void setTimingForCare(Timing timingForCare) {
         this.timingForCare = timingForCare;
     }
 

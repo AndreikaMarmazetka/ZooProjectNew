@@ -30,9 +30,8 @@ public class FirstLoad {
             loadFood(rs);
             rs = st.executeQuery(Query.loadEnviroment);
             loadEnviroment(rs);
-            rs = st.executeQuery(Query.loadPaddookType);
+            rs = st.executeQuery((Query.loadPaddookType));
             loadPaddookType(rs);
-
         } catch (SQLException e) {
             e.printStackTrace();
         }
