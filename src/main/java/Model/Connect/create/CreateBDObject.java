@@ -2,31 +2,40 @@ package Model.Connect.create;
 
 import Model.Connect.ConnectionBD;
 import Model.Connect.Query;
+import Model.create.objects.AnimalBox;
+import Model.create.objects.PaddookBox;
 import Model.objects.Animal;
 import Model.objects.Lists.AnimalType;
+import Model.objects.Lists.PaddookType;
 import Model.objects.Lists.TimingBox;
+import Model.objects.Paddook;
 import Model.objects.Timing;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CreateBDObject {
-    ConnectionBD connectionBD = ConnectionBD.getInstance();
-    java.sql.Statement st;
     Query query = new Query();
 
-    {
-        try {
-            st = connectionBD.getConnection().createStatement();
-            st.execute()
-        } catch (SQLException e) {
-            e.printStackTrace();
+    public void Create() {
+
+        ConnectionBD connectionBD = ConnectionBD.getInstance();
+        java.sql.Statement st;
+
+
+        {
+            try {
+                st = connectionBD.getConnection().createStatement();
+                st.execute("sad");
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         }
     }
 
-    public void createAnimalBD(Animal animal) {
-
-        query.createAddPaddookTypeQuery();
+    public void createAnimalBD(int type, int cost, int enviroment, int padook, int timing, String status, int status_way, int food) {
+        AnimalBox ab = AnimalBox.getInstance();
+        query.createAddAnimalQuery(ab.getSizeList(), type, cost, enviroment, padook, timing, status, status_way, food);
     }
 
     public void createAnimalTypeBD(Animal animal) {
@@ -39,5 +48,15 @@ public class CreateBDObject {
         Timing t;
         t = animal.getTimingForCare();
         query.createAddTiming(tb.getSizeList(), t.getFirst(), t.getSecond(), t.getThird(), t.getFource(), t.getFifth());
+    }
+
+    public void createPaddookBD(int type, int food, boolean dengerous) {
+        PaddookBox pb = PaddookBox.getInstance();
+        query.createAddPaddookQuery(pb.getSizeList(), type, food, dengerous);
+    }
+
+    public void createPadookTypeBD(String type) {
+        PaddookType pt = PaddookType.getInstance();
+        query.createAddPaddookTypeQuery(pt.getSizeList(), type);
     }
 }

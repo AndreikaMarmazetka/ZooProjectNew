@@ -23,7 +23,7 @@ public class Paddook {
         this.food = food;
     }
 
-    public boolean isDengerous() {
+    public boolean getDengerous() {
         return dengerous;
     }
 
