@@ -2,11 +2,10 @@ package Model.Connect.load;
 
 import Model.Connect.ConnectionBD;
 import Model.Connect.Query;
-import Model.create.objects.AnimalBox;
 import Model.create.objects.CreateAnimalAndPaddook;
+import Model.objects.Lists.*;
+import Model.objects.Timing;
 
-import java.beans.Statement;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
@@ -21,6 +20,7 @@ public class FirstLoad {
             loadAnimal(rs);
             rs = st.executeQuery(Query.loadPaddook);
             loadPaddook(rs);
+
         } catch (SQLException e) {
             e.printStackTrace();
         }
@@ -39,6 +39,47 @@ public class FirstLoad {
         CreateAnimalAndPaddook createPaddook = new CreateAnimalAndPaddook();
         while (rs.next()) {
             createPaddook.createPaddook(rs.getString(1), rs.getString(2), rs.getBoolean(3));
+        }
+    }
+
+    public void loadAnimalType(ResultSet rs) throws SQLException {
+        AnimalType at = AnimalType.getInstance();
+        while (rs.next()) {
+            at.addListTypeAnimal(rs.getString(1));
+        }
+    }
+
+    public void loadTiming(ResultSet rs) throws SQLException {
+        TimingBox tb = TimingBox.getInstance();
+        Timing t = new Timing();
+        while (rs.next()) {
+            t.setFirst(rs.getTime(1));
+            t.setSecond(rs.getTime(2));
+            t.setThird(rs.getTime(3));
+            t.setFource(rs.getTime(4));
+            t.setFifth(rs.getTime(5));
+            tb.addListTiming(t);
+        }
+    }
+
+    public void loadStatusWay(ResultSet rs) throws SQLException {
+        StatusWay sw = StatusWay.getInstance();
+        while (rs.next()) {
+            sw.addListStatuses(rs.getString(1));
+        }
+    }
+
+    public void loadFood(ResultSet rs) throws SQLException {
+        Food f = Food.getInstance();
+        while (rs.next()) {
+            f.addFoodList(rs.getString(1));
+        }
+    }
+
+    public void loadEnviroment(ResultSet rs) throws SQLException {
+        Enviroments e = Enviroments.getInstance();
+        while (rs.next()) {
+            e.addListEnvironment(rs.getString(1));
         }
     }
 }

@@ -22,7 +22,7 @@ public class StatusWay {
         return statusesList.get(i);
     }
 
-    public void AddListStatuses(String str) {
+    public void addListStatuses(String str) {
         statusesList.add(str);
     }
 }

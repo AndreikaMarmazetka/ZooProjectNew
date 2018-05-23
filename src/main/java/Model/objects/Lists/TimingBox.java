@@ -20,11 +20,11 @@ public class TimingBox {
         return TimingList.size();
     }
 
-    public Timing getStatusesList(int i) {
+    public Timing getListTiming(int i) {
         return TimingList.get(i);
     }
 
-    public void AddListStatuses(Timing timing) {
+    public void addListTiming(Timing timing) {
         TimingList.add(timing);
     }
 }

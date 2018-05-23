@@ -22,7 +22,7 @@ public class Query {
     final static public String loadStatusWay = "select * from StatusWay";
     final static public String loadFood = "select id, food from Food";
     final static public String loadEnviroment = "select id, environment from Environment";
-    final static public String loadPAddookType = "select id, type from PaddookType;";
+    final static public String loadPaddookType = "select id, type from PaddookType;";
 
 
     //--------------------------------OnCreate---------------------------
