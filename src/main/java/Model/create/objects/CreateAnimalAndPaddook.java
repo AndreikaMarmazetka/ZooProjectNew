@@ -2,6 +2,7 @@ package Model.create.objects;
 
 import Model.objects.Animal;
 import Model.objects.Paddook;
+import Model.objects.Timing;
 
 import java.sql.Time;
 import java.util.ArrayList;
@@ -18,12 +19,12 @@ public class CreateAnimalAndPaddook {
         animal.setCost(cost);
         animal.setEnviromentType(enviroment);
         animal.setPaddookType(paddookType);
-        List<Time> timing = new ArrayList<>();
-        timing.add(one);
-        timing.add(two);
-        timing.add(three);
-        timing.add(four);
-        timing.add(five);
+        Timing timing = new Timing();
+        timing.setFirst(one);
+        timing.setSecond(two);
+        timing.setThird(three);
+        timing.setFource(four);
+        timing.setFifth(five);
         animal.setTimingForCare(timing);
         animal.setStatus(status);
         animal.setStatusWay(statusWay);
@@ -31,9 +32,9 @@ public class CreateAnimalAndPaddook {
 
         AnimalBox animals = AnimalBox.getInstance();
         animals.AddListAnimal(animal);
-        for (int i = 4; i >= 0; i--) {
+       /* for (int i = 4; i >= 0; i--) {
             timing.remove(i);
-        }
+        }*/
     }
 
     public void createPaddook(String type, String food, boolean dengerous) {
