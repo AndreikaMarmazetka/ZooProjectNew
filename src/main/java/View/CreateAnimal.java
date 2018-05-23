@@ -9,19 +9,19 @@ public class CreateAnimal extends JDialog {
     private JButton buttonCancel;
     public JComboBox comboBoxType;
     public JTextField textFieldType;
-    public JTextField textField1;
-    public JComboBox comboBox1;
-    public JComboBox comboBox2;
-    public JTextField textField2;
-    public JButton createButton;
-    public JTextField textField3;
-    public JTextField textField4;
-    public JTextField textField5;
-    public JTextField textField6;
-    public JTextField textField7;
-    public JTextArea textArea1;
-    public JComboBox comboBox3;
-    public JComboBox comboBox4;
+    public JTextField textFieldCost;
+    public JComboBox comboBoxEnviroment;
+    public JComboBox comboBoxPaddook;
+    public JTextField textFieldPadook;
+    public JButton createButtonPaddook;
+    public JTextField textFieldTime1;
+    public JTextField textFieldTime2;
+    public JTextField textFieldTime3;
+    public JTextField textFieldTime4;
+    public JTextField textFieldTime5;
+    public JTextArea textStatus;
+    public JComboBox comboBoxStatusWay;
+    public JComboBox comboBoxFood;
 
     public CreateAnimal() {
         setContentPane(contentPane);
@@ -29,7 +29,8 @@ public class CreateAnimal extends JDialog {
         getRootPane().setDefaultButton(buttonOK);
 
         buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(ActionEvent e)
+            {
                 onOK();
             }
         });
@@ -40,7 +41,7 @@ public class CreateAnimal extends JDialog {
             }
         });
 
-        // call onCancel() when cross is clicked
+
         setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
         addWindowListener(new WindowAdapter() {
             public void windowClosing(WindowEvent e) {
@@ -48,7 +49,6 @@ public class CreateAnimal extends JDialog {
             }
         });
 
-        // call onCancel() on ESCAPE
         contentPane.registerKeyboardAction(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onCancel();
@@ -57,7 +57,7 @@ public class CreateAnimal extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
+
         dispose();
     }
 

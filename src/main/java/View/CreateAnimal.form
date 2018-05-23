@@ -107,11 +107,6 @@
                       <text value="Type"/>
                     </properties>
                   </component>
-                  <hspacer id="46063">
-                    <constraints>
-                      <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-                    </constraints>
-                  </hspacer>
                   <component id="8eacc" class="javax.swing.JLabel">
                     <constraints>
                       <grid row="1" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
@@ -120,7 +115,7 @@
                       <text value="Cost"/>
                     </properties>
                   </component>
-                  <component id="98d03" class="javax.swing.JTextField" binding="textField1" default-binding="true">
+                  <component id="98d03" class="javax.swing.JTextField" binding="textFieldCost">
                     <constraints>
                       <grid row="1" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -136,7 +131,7 @@
                       <text value="Enviroment"/>
                     </properties>
                   </component>
-                  <component id="20bdf" class="javax.swing.JComboBox" binding="comboBox1" default-binding="true">
+                  <component id="20bdf" class="javax.swing.JComboBox" binding="comboBoxEnviroment">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -150,13 +145,13 @@
                       <text value="Paddook"/>
                     </properties>
                   </component>
-                  <component id="8e57" class="javax.swing.JComboBox" binding="comboBox2" default-binding="true">
+                  <component id="8e57" class="javax.swing.JComboBox" binding="comboBoxPaddook">
                     <constraints>
                       <grid row="3" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="8efd1" class="javax.swing.JTextField" binding="textField2" default-binding="true">
+                  <component id="8efd1" class="javax.swing.JTextField" binding="textFieldPadook">
                     <constraints>
                       <grid row="3" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -164,7 +159,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="d0be9" class="javax.swing.JButton" binding="createButton" default-binding="true">
+                  <component id="d0be9" class="javax.swing.JButton" binding="createButtonPaddook">
                     <constraints>
                       <grid row="3" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -192,7 +187,7 @@
                       <text value="Timing Eat"/>
                     </properties>
                   </component>
-                  <component id="22db3" class="javax.swing.JTextField" binding="textField3" default-binding="true">
+                  <component id="22db3" class="javax.swing.JTextField" binding="textFieldTime1">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -202,15 +197,7 @@
                       <text value=""/>
                     </properties>
                   </component>
-                  <component id="bc786" class="javax.swing.JTextField" binding="textField4" default-binding="true">
-                    <constraints>
-                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
-                        <preferred-size width="150" height="-1"/>
-                      </grid>
-                    </constraints>
-                    <properties/>
-                  </component>
-                  <component id="f38e7" class="javax.swing.JTextField" binding="textField5" default-binding="true">
+                  <component id="f38e7" class="javax.swing.JTextField" binding="textFieldTime3">
                     <constraints>
                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -228,7 +215,7 @@
                       <text value="Status"/>
                     </properties>
                   </component>
-                  <component id="5f3ae" class="javax.swing.JTextField" binding="textField7" default-binding="true">
+                  <component id="5f3ae" class="javax.swing.JTextField" binding="textFieldTime5">
                     <constraints>
                       <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -236,15 +223,17 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="e053f" class="javax.swing.JTextField" binding="textField6" default-binding="true">
+                  <component id="e053f" class="javax.swing.JTextField" binding="textFieldTime4">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
                       </grid>
                     </constraints>
-                    <properties/>
+                    <properties>
+                      <text value=""/>
+                    </properties>
                   </component>
-                  <component id="bdf4a" class="javax.swing.JTextArea" binding="textArea1" default-binding="true">
+                  <component id="bdf4a" class="javax.swing.JTextArea" binding="textStatus">
                     <constraints>
                       <grid row="3" column="1" row-span="1" col-span="3" vsize-policy="6" hsize-policy="6" anchor="0" fill="3" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="81"/>
@@ -260,7 +249,7 @@
                       <text value="Status Way"/>
                     </properties>
                   </component>
-                  <component id="54c18" class="javax.swing.JComboBox" binding="comboBox3" default-binding="true">
+                  <component id="54c18" class="javax.swing.JComboBox" binding="comboBoxStatusWay">
                     <constraints>
                       <grid row="4" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
@@ -274,9 +263,17 @@
                       <text value="Eat Food"/>
                     </properties>
                   </component>
-                  <component id="4235a" class="javax.swing.JComboBox" binding="comboBox4" default-binding="true">
+                  <component id="4235a" class="javax.swing.JComboBox" binding="comboBoxFood">
                     <constraints>
                       <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
+                    </constraints>
+                    <properties/>
+                  </component>
+                  <component id="bc786" class="javax.swing.JTextField" binding="textFieldTime2">
+                    <constraints>
+                      <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
+                        <preferred-size width="150" height="-1"/>
+                      </grid>
                     </constraints>
                     <properties/>
                   </component>
