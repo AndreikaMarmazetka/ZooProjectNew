@@ -40,7 +40,7 @@ public class CreatePaddook extends JDialog {
         dispose();
     }
 
-    public static void main(String[] args) {
+    public static void open() {
         CreatePaddook dialog = new CreatePaddook();
         dialog.pack();
         dialog.setVisible(true);

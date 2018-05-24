@@ -41,6 +41,17 @@ public class CreateAnimal extends JDialog {
         });
 
 
+        createButtonPaddook.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                oncreateButtonPaddook();
+            }
+        });
+    }
+
+    private void oncreateButtonPaddook() {
+        CreatePaddook createP = new CreatePaddook();
+        createP.open();
     }
 
     private void onOK() {
