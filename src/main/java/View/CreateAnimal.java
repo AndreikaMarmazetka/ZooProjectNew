@@ -1,5 +1,7 @@
 package View;
 
+import Model.objects.Lists.Food;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -27,7 +29,9 @@ public class CreateAnimal extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-
+        //Food f = Food.getInstance();
+        //for(int i=0; i<=f.getSizeList()-1;i++)
+        //comboBoxFood.addItem(f.getFoodList(i));
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onOK();
@@ -60,7 +64,6 @@ public class CreateAnimal extends JDialog {
     }
 
     private void onCancel() {
-        // add your code here if necessary
         dispose();
     }
 
@@ -68,7 +71,6 @@ public class CreateAnimal extends JDialog {
         CreateAnimal dialog = new CreateAnimal();
         dialog.pack();
         dialog.setVisible(true);
-        // System.exit(0);
     }
 
 

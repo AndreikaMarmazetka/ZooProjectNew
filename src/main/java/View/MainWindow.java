@@ -1,5 +1,7 @@
 package View;
 
+import Model.objects.Lists.Food;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -15,6 +17,7 @@ public class MainWindow extends JFrame {
         setContentPane(panel1);
         setVisible(true);
         setSize(1000, 600);
+
 
         createAnimalButton.addActionListener(new ActionListener() {
             @Override
@@ -39,4 +42,6 @@ public class MainWindow extends JFrame {
     public static void main(String[] args) {
         new MainWindow();
     }
+
+
 }
