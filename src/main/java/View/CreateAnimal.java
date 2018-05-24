@@ -29,8 +29,7 @@ public class CreateAnimal extends JDialog {
         getRootPane().setDefaultButton(buttonOK);
 
         buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
+            public void actionPerformed(ActionEvent e) {
                 onOK();
             }
         });
@@ -42,22 +41,10 @@ public class CreateAnimal extends JDialog {
         });
 
 
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                onCancel();
-            }
-        });
-
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
     }
 
     private void onOK() {
-
+        comboBoxType.getSelectedIndex();
         dispose();
     }
 
@@ -66,10 +53,12 @@ public class CreateAnimal extends JDialog {
         dispose();
     }
 
-    public static void main(String[] args) {
+    public static void open() {
         CreateAnimal dialog = new CreateAnimal();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
+        // System.exit(0);
     }
+
+
 }
