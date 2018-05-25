@@ -1,6 +1,7 @@
 package VeiwModel;
 
 
+import Model.objects.Lists.PaddookType;
 import Model.services.users.*;
 import View.CreateAnimal;
 import View.CreatePaddook;
@@ -26,11 +27,15 @@ public class CaseUserFunction extends ObjoctInOutWindow {
                 ReservationService rs = ReservationService.getInstance();
             }
             case 5: {
+
                 CreateAnimalService cas = CreateAnimalService.getInstance();
+                cas.createAnimal(iType, Integer.parseInt(sCost), iEnviroment, iPaddook, sTime1, sTime2, sTime3, sTime4, sTime5, sStatus, iStatusWay, iFood);
             }
             case 6: {
                 CreatePaddookService cps = CreatePaddookService.getInstance();
-
+                CreatePaddookTypeService cpts = CreatePaddookTypeService.getInstance();
+                cpts.Create(sPaddookType);
+                cps.Create(iType, iFood, bDagerous);
             }
 
             }
