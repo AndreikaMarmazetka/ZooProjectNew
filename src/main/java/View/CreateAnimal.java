@@ -1,6 +1,7 @@
 package View;
 
 import Model.objects.Lists.Food;
+import VeiwModel.CaseUserFunction;
 
 import javax.swing.*;
 import java.awt.event.*;
@@ -54,8 +55,7 @@ public class CreateAnimal extends JDialog {
     }
 
     private void oncreateButtonPaddook() {
-        CreatePaddook createP = new CreatePaddook();
-        createP.open();
+        new CaseUserFunction().setNumberFunction(1);
     }
 
     private void onOK() {

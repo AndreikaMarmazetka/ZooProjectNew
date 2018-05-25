@@ -1,6 +1,6 @@
 package View;
 
-import Model.objects.Lists.Food;
+import VeiwModel.CaseUserFunction;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -12,6 +12,7 @@ public class MainWindow extends JFrame {
     public JButton searchAnimalButton;
     public JButton createAnimalButton;
     public JPanel panel1;
+    public int Button;
 
     public MainWindow() {
         setContentPane(panel1);
@@ -35,8 +36,7 @@ public class MainWindow extends JFrame {
     }
 
     private void oncreateAnimalButton() {
-        CreateAnimal createA = new CreateAnimal();
-        createA.open();
+        new CaseUserFunction().setNumberFunction(0);
     }
 
     public static void main(String[] args) {
