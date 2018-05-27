@@ -37,13 +37,11 @@ public class MainWindow extends JFrame {
     }
 
     private void oncreateAnimalButton() {
-        CreateAnimal.open();
+        new CreateAnimal().open();
     }
 
     public static void main(String[] args) {
         ZooApplication.LoadModel();
         new MainWindow();
     }
-
-
 }

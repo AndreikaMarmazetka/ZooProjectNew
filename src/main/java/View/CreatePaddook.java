@@ -18,7 +18,7 @@ public class CreatePaddook extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-
+        new BindValues().bindValueComboBoxFood(comboBoxFood);
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onOK();
@@ -44,7 +44,7 @@ public class CreatePaddook extends JDialog {
     }
 
     public void open() {
-        new BindValues().bindValueComboBoxFood(comboBoxFood);
+
         CreatePaddook dialog = new CreatePaddook();
         dialog.pack();
         dialog.setVisible(true);
