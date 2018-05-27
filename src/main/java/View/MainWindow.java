@@ -25,7 +25,9 @@ public class MainWindow extends JFrame {
         setContentPane(panel1);
         setVisible(true);
         setSize(1000, 600);
-        addAnimal(AnimalBox.getInstance().getListAnimal(0));
+        for(int i=0; i<=AnimalBox.getInstance().getSizeList()-1; i++) {
+            addAnimal(AnimalBox.getInstance().getListAnimal(0),i);
+        }
 
 
         createAnimalButton.addActionListener(new ActionListener() {
@@ -52,14 +54,18 @@ public class MainWindow extends JFrame {
         new MainWindow();
     }
 
-    public void addAnimal(Animal animal){
+    public void addAnimal(Animal animal, int k){
         panelAnimal.setLayout(null);
         for(int i=0; i<=11;i++) {
             JLabel l = new JLabel();
-            l.setBounds(5+80*i, 5, 80, 30);
+            l.setBounds(5+80*i, 5+30*2*k, 80, 30);
             l.setText(new CaseGetAnimal().getAnimalInfo(i, animal));
             panelAnimal.add(l);
         }
+        JButton button = new JButton();
+        button.setBounds(5+80*11, 5+30*(2*k+1), 80, 30);
+        button.setText("Buy");
+        panelAnimal.add(button);
         revalidate();
         repaint();
     }

@@ -20,9 +20,19 @@ public class CaseGetAnimal {
                 case 5:
                     return animal.getTimingForCare().getSecond().toString();
                 case 6:
-                    return animal.getTimingForCare().getThird().toString();
+                {
+                    if( animal.getTimingForCare().getThird() instanceof Time)
+                        return animal.getTimingForCare().getThird().toString();
+                    else
+                        return "null";
+                }
                 case 7:
-                    return animal.getTimingForCare().getFource().toString();
+                {
+                    if( animal.getTimingForCare().getFource() instanceof Time)
+                        return animal.getTimingForCare().getFource().toString();
+                    else
+                        return "null";
+                }
                 case 8:
                 {
                     if( animal.getTimingForCare().getFifth() instanceof Time)
