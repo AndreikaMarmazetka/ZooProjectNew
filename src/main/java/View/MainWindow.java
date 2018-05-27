@@ -1,5 +1,6 @@
 package View;
 
+import Model.ZooApplication;
 import VeiwModel.CaseUserFunction;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -44,7 +45,8 @@ public class MainWindow extends JFrame {
        // new CaseUserFunction().setNumberFunction(0);
     }
 
-    public static void loadWindow() {
+    public static void main(String[] args) {
+        new ZooApplication().LoadModel();
         new MainWindow();
     }
 

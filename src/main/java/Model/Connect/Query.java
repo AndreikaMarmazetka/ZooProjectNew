@@ -4,27 +4,27 @@ import java.sql.Time;
 
 public class Query {
     // ----------------------------------OnStartProgram--------------------
-    final static public String loadAnimal = "Select a.id, at.type, a.cost, e.environment, pt.type," +
-            " t.first, t.second, t.third, t.fourth, t.fifth," +
-            "a.status, sw.status_way, f.food from Animals" +
-            "left join AnimalType at on a.type=at.id" +
-            "left join Environment e on a.environment = e.id " +
-            "left join Paddook p on a.paddook = p.id " +
-            "left join PaddookType pt on p.type = pt.id " +
-            "left join Timing t on a.timing = t.id" +
-            "left join StatusWay sw on a.status_way=sw.id" +
-            "left join Food f on a.food=f.id";
+    final static public String loadAnimal = "Select a.id, at.type, a.cost, e.environment, pt.type,"+
+    "t.first, t.second, t.third, t.fourth, t.fifth,"+
+    "a.status, sw.status_way, f.food from  public.\"Animal\" a "+
+    "left join public.\"AnimalType\" at on a.type= at.id "+
+    "left join public.\"Environment\" e on a.environment = e.id "+
+    "left join public.\"Paddook\" p on a.paddook = p.id "+
+    "left join public.\"PaddookType\" pt on p.type = pt.id "+
+    "left join public.\"timing\" t on a.timing = t.id "+
+    "left join public.\"StatusWay\" sw on a.status_way=sw.id "+
+    "left join public.\"Food\" f on a.food=f.id";
 
-    final static public String loadPaddook = "SELECT p.id, pt.type, f.food, p.dangerous from Paddook p " +
-            "left join PaddookType pt on p.type = pt.id" +
-            "left join Food f on pt.food=id.food";
+    final static public String loadPaddook = "SELECT p.id, pt.type, f.food, p.dengirous from public.\"Paddook\" p " +
+            "left join public.\"PaddookType\" pt on p.type = pt.id " +
+            "left join public.\"Food\" f on p.food=f.id";
 
-    final static public String loadAnimalType = "select id, type from AnimalType;";
-    final static public String loadTiming = "select id, first, second, third, fourth, fifth from Timing;";
-    final static public String loadStatusWay = "select * from StatusWay";
-    final static public String loadFood = "select id, food from Food";
-    final static public String loadEnviroment = "select id, environment from Environment";
-    final static public String loadPaddookType = "select id, type from PaddookType;";
+    final static public String loadAnimalType = "select id, type from public.\"AnimalType\"";
+    final static public String loadTiming = "select id, first, second, third, fourth, fifth from public.\"timing\"";
+    final static public String loadStatusWay = "select * from public.\"StatusWay\"";
+    final static public String loadFood = "select id, food from public.\"Food\"";
+    final static public String loadEnviroment = "select id, environment from public.\"Environment\"";
+    final static public String loadPaddookType = "select id, type from public.\"PaddookType\"";
 
 
     //--------------------------------OnCreate---------------------------
