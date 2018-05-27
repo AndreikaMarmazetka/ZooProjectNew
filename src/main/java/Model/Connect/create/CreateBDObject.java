@@ -16,10 +16,10 @@ import java.sql.SQLException;
 
 public class CreateBDObject {
     Query query = new Query();
-
+    ConnectionBD connectionBD = ConnectionBD.getInstance();
     public void Create() {
 
-        ConnectionBD connectionBD = ConnectionBD.getInstance();
+
         java.sql.Statement st;
 
 

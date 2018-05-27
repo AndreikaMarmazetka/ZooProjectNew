@@ -1,5 +1,8 @@
 package View;
 
+import Model.objects.Lists.Food;
+import VeiwModel.CaseUserFunction;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -27,10 +30,11 @@ public class CreateAnimal extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-
+        //Food f = Food.getInstance();
+        //for(int i=0; i<=f.getSizeList()-1;i++)
+        //comboBoxFood.addItem(f.getFoodList(i));
         buttonOK.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent e)
-            {
+            public void actionPerformed(ActionEvent e) {
                 onOK();
             }
         });
@@ -42,34 +46,34 @@ public class CreateAnimal extends JDialog {
         });
 
 
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                onCancel();
+        createButtonPaddook.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                oncreateButtonPaddook();
             }
         });
+    }
 
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+    private void oncreateButtonPaddook() {
+        CreatePaddook cp = new CreatePaddook();
+        cp.open();
+       // new CaseUserFunction().setNumberFunction(1);
     }
 
     private void onOK() {
-
+        comboBoxType.getSelectedIndex();
         dispose();
     }
 
     private void onCancel() {
-        // add your code here if necessary
         dispose();
     }
 
-    public static void main(String[] args) {
+    public static void open() {
         CreateAnimal dialog = new CreateAnimal();
         dialog.pack();
         dialog.setVisible(true);
-        System.exit(0);
     }
+
+
 }

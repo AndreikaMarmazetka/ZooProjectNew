@@ -1,6 +1,7 @@
 package Model.create.objects;
 
 import Model.objects.Animal;
+import Model.objects.Lists.TimingBox;
 import Model.objects.Paddook;
 import Model.objects.Timing;
 
@@ -25,6 +26,7 @@ public class CreateAnimalAndPaddook {
         timing.setThird(three);
         timing.setFource(four);
         timing.setFifth(five);
+        TimingBox.getInstance().addListTiming(timing);
         animal.setTimingForCare(timing);
         animal.setStatus(status);
         animal.setStatusWay(statusWay);

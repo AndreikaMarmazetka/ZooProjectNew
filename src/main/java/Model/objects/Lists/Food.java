@@ -7,6 +7,7 @@ public class Food {
     private List<String> FoodList = new ArrayList<String>();
     private static Food ourInstance = new Food();
 
+
     public static Food getInstance() {
         return ourInstance;
     }
@@ -25,4 +26,11 @@ public class Food {
     public void addFoodList(String str) {
         FoodList.add(str);
     }
+   /* public void addFoodList() {
+        FoodList.add("Omnivorous");
+        FoodList.add("Hunter");
+        FoodList.add("Herbivores");
+    }*/
+
+
 }
