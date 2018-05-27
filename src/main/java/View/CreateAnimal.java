@@ -55,9 +55,7 @@ public class CreateAnimal extends JDialog {
     }
 
     private void oncreateButtonPaddook() {
-        CreatePaddook cp = new CreatePaddook();
-        cp.open();
-       // new CaseUserFunction().setNumberFunction(1);
+        new CaseUserFunction().setNumberFunction(1);
     }
 
     private void onOK() {

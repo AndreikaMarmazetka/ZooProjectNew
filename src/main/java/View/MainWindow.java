@@ -2,9 +2,6 @@ package View;
 
 import Model.ZooApplication;
 import VeiwModel.CaseUserFunction;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 
 import javax.swing.*;
 import java.awt.event.ActionEvent;
@@ -40,14 +37,13 @@ public class MainWindow extends JFrame {
     }
 
     private void oncreateAnimalButton() {
-        CreateAnimal ca = new CreateAnimal();
-        ca.open();
-       // new CaseUserFunction().setNumberFunction(0);
+        new CaseUserFunction().setNumberFunction(0);
     }
 
     public static void main(String[] args) {
-        new ZooApplication().LoadModel();
+        ZooApplication.LoadModel();
         new MainWindow();
     }
+
 
 }
