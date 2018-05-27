@@ -1,5 +1,8 @@
 package View;
 
+import VeiwModel.BindValues;
+import VeiwModel.CaseUserFunction;
+
 import javax.swing.*;
 import java.awt.event.*;
 
@@ -7,9 +10,9 @@ public class CreatePaddook extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JCheckBox dangerousCheckBox;
-    private JTextField textEditType;
-    private JComboBox comboBoxFood;
+    public JCheckBox dangerousCheckBox;
+    public JTextField textEditType;
+    public JComboBox comboBoxFood;
 
     public CreatePaddook() {
         setContentPane(contentPane);
@@ -40,7 +43,8 @@ public class CreatePaddook extends JDialog {
         dispose();
     }
 
-    public static void open() {
+    public void open() {
+        new BindValues().bindValueComboBoxFood(comboBoxFood);
         CreatePaddook dialog = new CreatePaddook();
         dialog.pack();
         dialog.setVisible(true);

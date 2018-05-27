@@ -14,7 +14,7 @@ public class CreatePaddookTypeService {
     }
 
     public void Create(String str) {
-        if (str.equals("")) {
+        if (str.equals("") || str.equals(null)) {
         } else {
             PaddookType paddookType = PaddookType.getInstance();
             CreateBDObject createType = new CreateBDObject();

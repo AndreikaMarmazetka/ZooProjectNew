@@ -1,14 +1,10 @@
 package Model.create.objects;
 
 import Model.objects.Animal;
-import Model.objects.Lists.TimingBox;
 import Model.objects.Paddook;
 import Model.objects.Timing;
 
 import java.sql.Time;
-import java.util.ArrayList;
-import java.util.List;
-
 
 
 public class CreateAnimalAndPaddook {

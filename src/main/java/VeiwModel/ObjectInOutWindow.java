@@ -1,6 +1,6 @@
 package VeiwModel;
 
-public class ObjoctInOutWindow {
+public class ObjectInOutWindow {
     protected String sType;
     protected String sCost;
     protected String sEnviroment;
@@ -20,4 +20,5 @@ public class ObjoctInOutWindow {
     protected int iEnviroment;
     protected boolean bDagerous;
     protected String sPaddookType;
+    protected int iFoodPaddook;
 }

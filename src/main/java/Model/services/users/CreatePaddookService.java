@@ -24,6 +24,7 @@ public class CreatePaddookService {
         createAnimalAndPaddook.createPaddook(PaddookType.getInstance().getListTypePaddook(type),
                 Food.getInstance().getFoodList(food), dengerous);
         new CreateBDObject().createPaddookBD(type, food, dengerous);
+        new CreateBDObject().CreatePaddok();
 
     }
 

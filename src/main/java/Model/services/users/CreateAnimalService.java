@@ -4,6 +4,7 @@ import Model.Connect.create.CreateBDObject;
 import Model.ZooApplication;
 import Model.create.objects.CreateAnimalAndPaddook;
 import Model.create.objects.PaddookBox;
+import Model.create.objects.TimingBox;
 import Model.objects.Lists.*;
 import Model.objects.Timing;
 

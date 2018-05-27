@@ -3,6 +3,7 @@ package Model.Connect.load;
 import Model.Connect.ConnectionBD;
 import Model.Connect.Query;
 import Model.create.objects.CreateAnimalAndPaddook;
+import Model.create.objects.TimingBox;
 import Model.objects.Lists.*;
 import Model.objects.Timing;
 

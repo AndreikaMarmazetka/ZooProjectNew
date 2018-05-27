@@ -22,8 +22,5 @@ public class ZooApplication {
         FirstLoad fl = new FirstLoad();
         fl.loadObjects();
         System.out.println(AnimalBox.getInstance().getListAnimal(0).getType());
-
     }
-
-
 }

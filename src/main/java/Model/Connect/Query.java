@@ -40,7 +40,7 @@ public class Query {
     }
 
     public void createAddPaddookQuery(int id, int paddook_type, int food, boolean dangerous) {
-        addPaddook = "insert into Paddook (" + id + ", " + paddook_type + ", " + food + ", " + dangerous + ") values";
+        addPaddook = "insert into public.\"Paddook\" (" + id + ", " + paddook_type + ", " + food + ", " + dangerous + ") values";
     }
 
     public void createAddAnimalTypeQuery(int id, String type) {
@@ -52,7 +52,7 @@ public class Query {
     }
 
     public void createAddPaddookTypeQuery(int id, String type) {
-        addPaddookType = "insert into PaddookTypes (" + id + "," + type + ") values ";
+        addPaddookType = "insert into public.\"PaddookTypes\" (" + id + "," + type + ") values ";
     }
 
     //------------------------------Update---------------------------
