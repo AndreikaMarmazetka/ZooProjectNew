@@ -1,13 +1,9 @@
-package Model.services.users;
+package Sevices.user;
 
 import Model.Connect.create.CreateBDObject;
 import Model.create.objects.CreateAnimalAndPaddook;
-import Model.create.objects.PaddookBox;
 import Model.objects.Lists.Food;
 import Model.objects.Lists.PaddookType;
-import Model.objects.Paddook;
-
-import javax.validation.constraints.Null;
 
 public class CreatePaddookService {
     private static CreatePaddookService ourInstance = new CreatePaddookService();
@@ -24,6 +20,7 @@ public class CreatePaddookService {
         createAnimalAndPaddook.createPaddook(PaddookType.getInstance().getListTypePaddook(type),
                 Food.getInstance().getFoodList(food), dengerous);
         new CreateBDObject().createPaddookBD(type, food, dengerous);
+        new CreateBDObject().CreatePaddok();
 
     }
 

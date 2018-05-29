@@ -1,4 +1,4 @@
-package Model.services.users;
+package Sevices.user;
 
 import Model.Connect.create.CreateBDObject;
 import Model.objects.Lists.PaddookType;
@@ -14,7 +14,7 @@ public class CreatePaddookTypeService {
     }
 
     public void Create(String str) {
-        if (str.equals("")) {
+        if (str.equals("") || str.equals(null)) {
         } else {
             PaddookType paddookType = PaddookType.getInstance();
             CreateBDObject createType = new CreateBDObject();

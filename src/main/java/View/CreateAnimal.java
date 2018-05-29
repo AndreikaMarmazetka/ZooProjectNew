@@ -1,6 +1,7 @@
 package View;
 
 import Model.objects.Lists.Food;
+import VeiwModel.BindValues;
 import VeiwModel.CaseUserFunction;
 
 import javax.swing.*;
@@ -30,9 +31,12 @@ public class CreateAnimal extends JDialog {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-        //Food f = Food.getInstance();
-        //for(int i=0; i<=f.getSizeList()-1;i++)
-        //comboBoxFood.addItem(f.getFoodList(i));
+        new BindValues().bindValueComboBoxFood(comboBoxFood);
+        new BindValues().bindValueComboBoxEnviroment(comboBoxEnviroment);
+        new BindValues().bindValueComboBoxPaddook(comboBoxPaddook);
+        new BindValues().bindValueComboBoxType(comboBoxType);
+        new BindValues().bindValueComboBoxStatusWay(comboBoxStatusWay);
+
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
                 onOK();
@@ -55,7 +59,7 @@ public class CreateAnimal extends JDialog {
     }
 
     private void oncreateButtonPaddook() {
-        new CaseUserFunction().setNumberFunction(1);
+        new CreatePaddook().open();
     }
 
     private void onOK() {
@@ -67,7 +71,8 @@ public class CreateAnimal extends JDialog {
         dispose();
     }
 
-    public static void open() {
+    public void open() {
+
         CreateAnimal dialog = new CreateAnimal();
         dialog.pack();
         dialog.setVisible(true);

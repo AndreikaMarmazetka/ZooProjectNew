@@ -7,31 +7,29 @@ import Model.create.objects.PaddookBox;
 import Model.objects.Animal;
 import Model.objects.Lists.AnimalType;
 import Model.objects.Lists.PaddookType;
-import Model.objects.Lists.TimingBox;
-import Model.objects.Paddook;
+import Model.create.objects.TimingBox;
 import Model.objects.Timing;
 
-import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class CreateBDObject {
     Query query = new Query();
     ConnectionBD connectionBD = ConnectionBD.getInstance();
-    public void Create() {
 
-
+    public void CreatePaddok() {
         java.sql.Statement st;
-
-
         {
             try {
+                connectionBD.Connect();
                 st = connectionBD.getConnection().createStatement();
-                st.execute("sad");
+                st.executeUpdate(Query.loadPaddookType);
+                st.executeUpdate(Query.loadPaddook);
             } catch (SQLException e) {
                 e.printStackTrace();
             }
         }
     }
+
 
     public void createAnimalBD(int type, int cost, int enviroment, int padook, int timing, String status, int status_way, int food) {
         AnimalBox ab = AnimalBox.getInstance();

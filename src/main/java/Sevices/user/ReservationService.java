@@ -1,4 +1,4 @@
-package Model.services.users;
+package Sevices.user;
 
 public class ReservationService {
     private static ReservationService ourInstance = new ReservationService();

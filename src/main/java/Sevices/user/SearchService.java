@@ -1,4 +1,4 @@
-package Model.services.users;
+package Sevices.user;
 
 import Model.Connect.ConnectionBD;
 

@@ -1,6 +1,9 @@
 package Model;
 
 import Model.Connect.ConnectionBD;
+import Model.Connect.load.FirstLoad;
+import Model.create.objects.AnimalBox;
+import View.MainWindow;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
@@ -14,12 +17,10 @@ import java.util.Scanner;
 public class ZooApplication {
 
 
-    public static void main(String[] args) {
-        /*SpringApplication.run(ZooApplication.class, args);
-        ConnectionBD connection = ConnectionBD.getInstance();
-        connection.Connect();*/
-
+    public static void LoadModel() {
+        SpringApplication.run(ZooApplication.class);
+        FirstLoad fl = new FirstLoad();
+        fl.loadObjects();
+        System.out.println(AnimalBox.getInstance().getListAnimal(0).getType());
     }
-
-
 }

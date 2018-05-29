@@ -1,4 +1,4 @@
-package Model.auto.services;
+package Sevices.auto;
 
 public class ChangeStatusWay {
     private static ChangeStatusWay ourInstance = new ChangeStatusWay();
