@@ -4,16 +4,16 @@ import java.sql.Time;
 
 public class Query {
     // ----------------------------------OnStartProgram--------------------
-    final static public String loadAnimal = "Select a.id, at.type, a.cost, e.environment, pt.type," +
-            "t.first, t.second, t.third, t.fourth, t.fifth," +
-            "a.status, sw.status_way, f.food from  public.\"Animal\" a " +
-            "left join public.\"AnimalType\" at on a.type= at.id " +
-            "left join public.\"Environment\" e on a.environment = e.id " +
-            "left join public.\"Paddook\" p on a.paddook = p.id " +
-            "left join public.\"PaddookType\" pt on p.type = pt.id " +
-            "left join public.\"timing\" t on a.timing = t.id " +
-            "left join public.\"StatusWay\" sw on a.status_way=sw.id " +
-            "left join public.\"Food\" f on a.food=f.id";
+    final static public String loadAnimal = "Select a.id, at.type, a.cost, e.environment, pt.type,"+
+    "t.first, t.second, t.third, t.fourth, t.fifth,"+
+    "a.status, sw.status_way, f.food from  public.\"Animal\" a "+
+    "left join public.\"AnimalType\" at on a.type= at.id "+
+    "left join public.\"Environment\" e on a.environment = e.id "+
+    "left join public.\"Paddook\" p on a.paddook = p.id "+
+    "left join public.\"PaddookType\" pt on p.type = pt.id "+
+    "left join public.\"timing\" t on a.timing = t.id "+
+    "left join public.\"StatusWay\" sw on a.status_way=sw.id "+
+    "left join public.\"Food\" f on a.food=f.id";
 
     final static public String loadPaddook = "SELECT p.id, pt.type, f.food, p.dengirous from public.\"Paddook\" p " +
             "left join public.\"PaddookType\" pt on p.type = pt.id " +
