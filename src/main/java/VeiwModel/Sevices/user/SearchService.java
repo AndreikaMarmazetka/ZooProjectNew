@@ -1,11 +1,18 @@
 package VeiwModel.Sevices.user;
 
 import DAO.ConnectionBD;
+import DAO.Query;
 
 public class SearchService {
-
-
-    ConnectionBD connect1 = ConnectionBD.getInstance();
-    String query = "Select * from Animal a where a.type=\"strtype\" ";
-
+    public void parseQuery() {
+        String searchAnimalQuery = Query.loadAnimal;
+        if ()
+            Thread newThread = new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    System.out.print(5);
+                }
+            });
+        newThread.start();
+    }
 }

@@ -246,7 +246,7 @@
                       <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Status Way"/>
+                      <text value="Status Shipment"/>
                     </properties>
                   </component>
                   <component id="54c18" class="javax.swing.JComboBox" binding="comboBoxStatusWay">
@@ -263,7 +263,7 @@
                       <text value="Eat Food"/>
                     </properties>
                   </component>
-                  <component id="4235a" class="javax.swing.JComboBox" binding="comboBoxFood">
+                  <component id="4235a" class="javax.swing.JComboBox" binding="comboBoxAnimalFood">
                     <constraints>
                       <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>

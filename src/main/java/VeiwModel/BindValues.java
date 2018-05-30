@@ -7,6 +7,7 @@ import Model.objects.Lists.Food;
 import Model.objects.Lists.StatusWay;
 import View.CreateAnimal;
 import View.CreatePaddook;
+import View.SearchAnimal;
 
 import javax.swing.*;
 
@@ -32,9 +33,18 @@ public class BindValues extends ObjectInOutWindow{
         sTimeCareFivth = createAnimal.textFieldTimeCareFivth.getText();
         sStatus = createAnimal.textStatus.getText();
         iStatusWay = createAnimal.comboBoxStatusWay.getSelectedIndex();
-        iFood = createAnimal.comboBoxFood.getSelectedIndex();
+        iFood = createAnimal.comboBoxAnimalFood.getSelectedIndex();
     }
 
+    public void bindValueSearchAnimal(SearchAnimal searchAnimal) {
+        sType = searchAnimal.textFieldSearchType.getText();
+        sCost = searchAnimal.textFieldSearchMinimalCost.getText();
+        sMaximumCost = searchAnimal.textFieldSearchMaximalCost.getText();
+        iEnviroment = searchAnimal.comboBoxSearchEnviroment.getSelectedIndex();
+        iPaddook = searchAnimal.comboBoxSearchPaddook.getSelectedIndex();
+        iStatusWay = searchAnimal.comboBoxSearchStatusWay.getSelectedIndex();
+        iFood = searchAnimal.comboBoxSearchFood.getSelectedIndex();
+    }
 
     public void bindValueComboBoxFood(JComboBox cb){
         Food f= Food.getInstance();

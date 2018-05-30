@@ -1,6 +1,5 @@
 package View;
 
-import Model.objects.Lists.Food;
 import VeiwModel.BindValues;
 import VeiwModel.CaseUserFunction;
 
@@ -25,13 +24,13 @@ public class CreateAnimal extends JDialog {
     public JTextField textFieldTimeCareFivth;
     public JTextArea textStatus;
     public JComboBox comboBoxStatusWay;
-    public JComboBox comboBoxFood;
+    public JComboBox comboBoxAnimalFood;
 
     public CreateAnimal() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-        new BindValues().bindValueComboBoxFood(comboBoxFood);
+        new BindValues().bindValueComboBoxFood(comboBoxAnimalFood);
         new BindValues().bindValueComboBoxEnviroment(comboBoxEnviroment);
         new BindValues().bindValueComboBoxPaddook(comboBoxPaddook);
         new BindValues().bindValueComboBoxType(comboBoxType);

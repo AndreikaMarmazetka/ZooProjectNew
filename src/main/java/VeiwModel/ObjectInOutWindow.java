@@ -3,6 +3,7 @@ package VeiwModel;
 public class ObjectInOutWindow {
     protected String sType;
     protected String sCost;
+    protected String sMaximumCost;
     protected String sEnviroment;
     protected String sPaddook;
     protected String sTimeCareFirst;

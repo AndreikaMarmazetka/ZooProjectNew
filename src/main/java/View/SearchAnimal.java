@@ -1,5 +1,6 @@
 package View;
 
+import VeiwModel.BindValues;
 import VeiwModel.CaseUserFunction;
 import VeiwModel.Sevices.user.SearchService;
 
@@ -10,19 +11,23 @@ public class SearchAnimal extends JDialog {
     private JPanel contentPane;
     private JButton buttonOK;
     private JButton buttonCancel;
-    private JTextField textFieldSearchType;
-    private JTextField textFieldSearchMinimalCost;
-    private JTextField textFieldSearchMaximalCost;
-    private JComboBox comboBoxSearchEnviroment;
-    private JComboBox comboBoxSearchPaddook;
-    private JComboBox comboBoxSearchStatusWay;
-    private JComboBox comboBoxSearchFood;
+    public JTextField textFieldSearchType;
+    public JTextField textFieldSearchMinimalCost;
+    public JTextField textFieldSearchMaximalCost;
+    public JComboBox comboBoxSearchEnviroment;
+    public JComboBox comboBoxSearchPaddook;
+    public JComboBox comboBoxSearchStatusWay;
+    public JComboBox comboBoxSearchFood;
 
     public SearchAnimal() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
         setSize(300, 400);
+        new BindValues().bindValueComboBoxFood(comboBoxSearchFood);
+        new BindValues().bindValueComboBoxEnviroment(comboBoxSearchEnviroment);
+        new BindValues().bindValueComboBoxPaddook(comboBoxSearchPaddook);
+        new BindValues().bindValueComboBoxFood(comboBoxSearchFood);
 
         buttonOK.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -36,21 +41,12 @@ public class SearchAnimal extends JDialog {
             }
         });
 
-        setDefaultCloseOperation(DO_NOTHING_ON_CLOSE);
-        addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent e) {
-                onCancel();
-            }
-        });
 
-        contentPane.registerKeyboardAction(new ActionListener() {
-            public void actionPerformed(ActionEvent e) {
-                onCancel();
-            }
-        }, KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0), JComponent.WHEN_ANCESTOR_OF_FOCUSED_COMPONENT);
+
     }
 
     private void onOK() {
+        new BindValues().bindValueSearchAnimal(this);
         new CaseUserFunction().setNumberFunction(2);
         dispose();
     }
