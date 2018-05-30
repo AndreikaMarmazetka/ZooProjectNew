@@ -3,6 +3,7 @@ package VeiwModel;
 
 //import Model.services.users.*;
 
+import Model.objects.Lists.Types;
 import VeiwModel.Sevices.user.*;
 import VeiwModel.Sevices.user.AnimalInfoCreated.CreateAnimalService;
 import VeiwModel.Sevices.user.AnimalInfoCreated.CreateTypeService;
@@ -40,7 +41,7 @@ public class CaseUserFunction extends ObjectInOutWindow {
                 CreatePaddookService cps = new CreatePaddookService();
                 CreatePaddookTypeService cpts = new CreatePaddookTypeService();
                 cpts.Create(sPaddookType);
-                cps.Create(iType, iFood, bDagerous);
+                cps.Create(Types.getInstance().getSizeList(), iFood, bDagerous);
             }
 
             }

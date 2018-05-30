@@ -22,8 +22,8 @@ public class CreateBDObject {
             try {
                 connectionBD.Connect();
                 st = connectionBD.getConnection().createStatement();
-                st.executeUpdate(Query.loadPaddookType);
-                st.executeUpdate(Query.loadPaddook);
+                st.executeUpdate(Query.addPaddookType);
+                st.executeUpdate(Query.addPaddook);
             } catch (SQLException e) {
                 e.printStackTrace();
             }

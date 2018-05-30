@@ -6,7 +6,7 @@ public class CreateTypeService {
     public void Create(String str) {
         if (str.equals("") || str.equals(null)) {
         } else {
-            Types types = new Types();
+            Types types = Types.getInstance();
             types.addListTypes(str);
         }
     }

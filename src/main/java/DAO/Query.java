@@ -40,7 +40,7 @@ public class Query {
     }
 
     public void createAddPaddookQuery(int id, int paddook_type, int food, boolean dangerous) {
-        addPaddook = "insert into public.\"Paddook\" (id, type, food , dengrous )" +
+        addPaddook = "insert into public.\"Paddook\" (id, type, food , dengirous )" +
                 " values(" + id + ", " + paddook_type + ", " + food + ", " + dangerous + ")";
     }
 
