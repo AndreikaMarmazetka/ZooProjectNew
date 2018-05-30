@@ -187,7 +187,7 @@
                       <text value="Timing Eat"/>
                     </properties>
                   </component>
-                  <component id="22db3" class="javax.swing.JTextField" binding="textFieldTime1">
+                  <component id="22db3" class="javax.swing.JTextField" binding="textFieldTimeCareFirst">
                     <constraints>
                       <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -197,7 +197,7 @@
                       <text value=""/>
                     </properties>
                   </component>
-                  <component id="f38e7" class="javax.swing.JTextField" binding="textFieldTime3">
+                  <component id="f38e7" class="javax.swing.JTextField" binding="textFieldTimeCareThird">
                     <constraints>
                       <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -215,7 +215,7 @@
                       <text value="Status"/>
                     </properties>
                   </component>
-                  <component id="5f3ae" class="javax.swing.JTextField" binding="textFieldTime5">
+                  <component id="5f3ae" class="javax.swing.JTextField" binding="textFieldTimeCareFivth">
                     <constraints>
                       <grid row="2" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -223,7 +223,7 @@
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="e053f" class="javax.swing.JTextField" binding="textFieldTime4">
+                  <component id="e053f" class="javax.swing.JTextField" binding="textFieldTimeCareFouth">
                     <constraints>
                       <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>
@@ -246,7 +246,7 @@
                       <grid row="4" column="0" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties>
-                      <text value="Status Way"/>
+                      <text value="Status Shipment"/>
                     </properties>
                   </component>
                   <component id="54c18" class="javax.swing.JComboBox" binding="comboBoxStatusWay">
@@ -263,13 +263,13 @@
                       <text value="Eat Food"/>
                     </properties>
                   </component>
-                  <component id="4235a" class="javax.swing.JComboBox" binding="comboBoxFood">
+                  <component id="4235a" class="javax.swing.JComboBox" binding="comboBoxAnimalFood">
                     <constraints>
                       <grid row="5" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
                     </constraints>
                     <properties/>
                   </component>
-                  <component id="bc786" class="javax.swing.JTextField" binding="textFieldTime2">
+                  <component id="bc786" class="javax.swing.JTextField" binding="textFieldTimeCareSecond">
                     <constraints>
                       <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="0" hsize-policy="6" anchor="8" fill="1" indent="0" use-parent-layout="false">
                         <preferred-size width="150" height="-1"/>

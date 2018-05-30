@@ -1,6 +1,5 @@
 package View;
 
-import Model.objects.Lists.Food;
 import VeiwModel.BindValues;
 import VeiwModel.CaseUserFunction;
 
@@ -18,20 +17,20 @@ public class CreateAnimal extends JDialog {
     public JComboBox comboBoxPaddook;
     public JTextField textFieldPadook;
     public JButton createButtonPaddook;
-    public JTextField textFieldTime1;
-    public JTextField textFieldTime2;
-    public JTextField textFieldTime3;
-    public JTextField textFieldTime4;
-    public JTextField textFieldTime5;
+    public JTextField textFieldTimeCareFirst;
+    public JTextField textFieldTimeCareSecond;
+    public JTextField textFieldTimeCareThird;
+    public JTextField textFieldTimeCareFouth;
+    public JTextField textFieldTimeCareFivth;
     public JTextArea textStatus;
     public JComboBox comboBoxStatusWay;
-    public JComboBox comboBoxFood;
+    public JComboBox comboBoxAnimalFood;
 
     public CreateAnimal() {
         setContentPane(contentPane);
         setModal(true);
         getRootPane().setDefaultButton(buttonOK);
-        new BindValues().bindValueComboBoxFood(comboBoxFood);
+        new BindValues().bindValueComboBoxFood(comboBoxAnimalFood);
         new BindValues().bindValueComboBoxEnviroment(comboBoxEnviroment);
         new BindValues().bindValueComboBoxPaddook(comboBoxPaddook);
         new BindValues().bindValueComboBoxType(comboBoxType);
@@ -63,7 +62,8 @@ public class CreateAnimal extends JDialog {
     }
 
     private void onOK() {
-        comboBoxType.getSelectedIndex();
+        new BindValues().bindValueCreateAnimal(this);
+        new CaseUserFunction().setNumberFunction(5);
         dispose();
     }
 
@@ -72,7 +72,6 @@ public class CreateAnimal extends JDialog {
     }
 
     public void open() {
-
         CreateAnimal dialog = new CreateAnimal();
         dialog.pack();
         dialog.setVisible(true);

@@ -1,24 +1,25 @@
 package VeiwModel;
 
 public class ObjectInOutWindow {
-    protected String sType;
-    protected String sCost;
-    protected String sEnviroment;
-    protected String sPaddook;
-    protected String sTime1;
-    protected String sTime2;
-    protected String sTime3;
-    protected String sTime4;
-    protected String sTime5;
-    protected String sStatus;
-    protected String sStatusWay;
-    protected String sFood;
-    protected int iFood;
-    protected int iType;
-    protected int iPaddook;
-    protected int iStatusWay;
-    protected int iEnviroment;
-    protected boolean bDagerous;
-    protected String sPaddookType;
-    protected int iFoodPaddook;
+    protected static String sType;
+    protected static String sCost;
+    protected static String sMaximumCost;
+    protected static String sEnviroment;
+    protected static String sPaddook;
+    protected static String sTimeCareFirst;
+    protected static String sTimeCareSecond;
+    protected static String sTimeCareThird;
+    protected static String sTimeCareFouth;
+    protected static String sTimeCareFivth;
+    protected static String sStatus;
+    protected static String sStatusWay;
+    protected static String sFood;
+    protected static int iFood;
+    protected static int iType;
+    protected static int iPaddook;
+    protected static int iStatusWay;
+    protected static int iEnviroment;
+    protected static boolean bDagerous;
+    protected static String sPaddookType;
+    protected static int iFoodPaddook;
 }

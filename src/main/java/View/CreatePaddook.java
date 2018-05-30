@@ -35,7 +35,9 @@ public class CreatePaddook extends JDialog {
     }
 
     private void onOK() {
-        // add your code here
+        new BindValues().bindValueCreatePaddook(this);
+        new CaseUserFunction().setNumberFunction(6);
+
         dispose();
     }
 
