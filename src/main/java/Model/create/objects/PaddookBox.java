@@ -24,7 +24,7 @@ public class PaddookBox {
         return ListPaddook.get(i);
     }
 
-    public void AddListPaddook(Paddook paddook) {
+    public void addListPaddook(Paddook paddook) {
         ListPaddook.add(paddook);
     }
 

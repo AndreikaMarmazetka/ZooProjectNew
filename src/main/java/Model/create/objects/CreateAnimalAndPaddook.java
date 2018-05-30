@@ -41,6 +41,6 @@ public class CreateAnimalAndPaddook {
         paddook.setFood(food);
         paddook.setDengerous(dengerous);
         PaddookBox paddooks = PaddookBox.getInstance();
-        paddooks.AddListPaddook(paddook);
+        paddooks.addListPaddook(paddook);
     }
 }

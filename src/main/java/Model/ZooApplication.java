@@ -1,7 +1,6 @@
 package Model;
 
-import DAO.Connect.load.FirstLoad;
-import Model.create.objects.AnimalBox;
+import DAO.load.FirstLoad;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;

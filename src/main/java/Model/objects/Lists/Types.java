@@ -4,15 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Types {
-    private List<String> typesList = new ArrayList<String>();
-    private static Types ourInstance = new Types();
+    public final List<String> typesList = new ArrayList<String>();
 
-    public static Types getInstance() {
-        return ourInstance;
-    }
-
-    private Types() {
-    }
 
     public int getSizeList() {
         return typesList.size();
@@ -22,7 +15,7 @@ public class Types {
         return typesList.get(i);
     }
 
-    public void AddListTypes(String str) {
+    public void addListTypes(String str) {
         typesList.add(str);
     }
 }

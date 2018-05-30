@@ -43,10 +43,22 @@ public class MainWindow extends JFrame {
                 System.exit(0);
             }
         });
+
+        searchAnimalButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                onSearchAnimalButton();
+            }
+        });
     }
+
 
     private void oncreateAnimalButton() {
         new CreateAnimal().open();
+    }
+
+    private void onSearchAnimalButton() {
+        new SearchAnimal().open();
     }
 
     public static void main(String[] args) {

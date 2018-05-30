@@ -1,6 +1,6 @@
-package VeiwModel.Sevices.user;
+package VeiwModel.Sevices.user.AnimalInfoCreated;
 
-import DAO.Connect.create.CreateBDObject;
+import DAO.create.CreateBDObject;
 import Model.ZooApplication;
 import Model.create.objects.CreateAnimalAndPaddook;
 import Model.create.objects.PaddookBox;
@@ -16,15 +16,6 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class CreateAnimalService {
-    private static CreateAnimalService ourInstance = new CreateAnimalService();
-
-    public static CreateAnimalService getInstance() {
-        return ourInstance;
-    }
-
-    private CreateAnimalService() {
-        //
-    }
 
     public void createAnimal(int type, int cost, int enviroment, int padook, String timing1, String timing2, String timing3, String timing4,
                              String timing5, String status, int status_way, int food) {
@@ -47,11 +38,13 @@ public class CreateAnimalService {
         DateFormat format = new SimpleDateFormat("HH:mm");
         Time time;
         try {
-            time = (Time) format.parse(str);
+            time = new Time(format.parse(str).getTime());
             return time;
         } catch (ParseException ex) {
             Logger.getLogger(ZooApplication.class.getName()).log(Level.SEVERE, null, ex);
             return null;
         }
     }
+
+
 }
