@@ -29,19 +29,18 @@ public class Query {
 
     //--------------------------------OnCreate---------------------------
 
-    public static String addAnimal;
-    public static String addPaddook;
-    public static String addAnimalType;
-    public static String addTiming;
-    public static String addPaddookType;
+    public String addAnimal;
+    public String addPaddook;
+    public String addAnimalType;
+    public String addTiming;
+    public String addPaddookType;
 
     public void createAddAnimalQuery(int id, int type, int cost, int environment, int paddook, int timing, String status, int status_way, int food) {
         addAnimal = "insert into Animals (" + id + ", " + type + ", " + cost + ", " + environment + ", " + paddook + ", " + timing + ", " + status + ", " + status_way + ", " + food + ") values";
     }
 
     public void createAddPaddookQuery(int id, int paddook_type, int food, boolean dangerous) {
-        addPaddook = "insert into public.\"Paddook\" (id, type, food , dengirous )" +
-                " values(" + id + ", " + paddook_type+1 + ", " + food+1 + ", " + dangerous + ")";
+        addPaddook = "insert into public.\"Paddook\" (" + id + ", " + paddook_type + ", " + food + ", " + dangerous + ") values";
     }
 
     public void createAddAnimalTypeQuery(int id, String type) {
@@ -53,7 +52,7 @@ public class Query {
     }
 
     public void createAddPaddookTypeQuery(int id, String type) {
-        addPaddookType = "insert into public.\"PaddookType\" (id ,type ) values ("+id+",'"+type+"')";
+        addPaddookType = "insert into public.\"PaddookTypes\" (" + id + "," + type + ") values ";
     }
 
     //------------------------------Update---------------------------

@@ -6,8 +6,7 @@ import Model.objects.Lists.PaddookType;
 public class CreatePaddookTypeService {
 
     public void Create(String str) {
-        if (str.equals("")) {
-            System.out.println("adll");
+        if (str.equals("") || str.equals(null)) {
         } else {
             PaddookType paddookType = PaddookType.getInstance();
             CreateBDObject createType = new CreateBDObject();
