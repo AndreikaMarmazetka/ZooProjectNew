@@ -5,16 +5,34 @@ import Model.create.objects.PaddookBox;
 import Model.objects.Lists.Enviroments;
 import Model.objects.Lists.Food;
 import Model.objects.Lists.StatusWay;
+import View.CreateAnimal;
 import View.CreatePaddook;
 
 import javax.swing.*;
 
 public class BindValues extends ObjectInOutWindow{
 
-    public void bindValueCreatePaddook(){
-        sPaddookType =new CreatePaddook().textEditType.toString();
-        iFood = new CreatePaddook().comboBoxFood.getSelectedIndex();
-        bDagerous = new CreatePaddook().dangerousCheckBox.isSelected();
+    public void bindValueCreatePaddook(CreatePaddook createPaddok) {
+        sPaddookType = createPaddok.textEditType.getText();
+        iFood = createPaddok.comboBoxFood.getSelectedIndex();
+        bDagerous = createPaddok.dangerousCheckBox.isSelected();
+    }
+
+    public void bindValueCreateAnimal(CreateAnimal createAnimal) {
+        sType = createAnimal.textFieldType.getText();
+        iType = createAnimal.comboBoxType.getSelectedIndex();
+        sCost = createAnimal.textFieldCost.getText();
+        iEnviroment = createAnimal.comboBoxEnviroment.getSelectedIndex();
+        iPaddook = createAnimal.comboBoxPaddook.getSelectedIndex();
+        sPaddookType = createAnimal.textFieldPadook.getText();
+        sTimeCareFirst = createAnimal.textFieldTimeCareFirst.getText();
+        sTimeCareSecond = createAnimal.textFieldTimeCareSecond.getText();
+        sTimeCareThird = createAnimal.textFieldTimeCareThird.getText();
+        sTimeCareFouth = createAnimal.textFieldTimeCareFouth.getText();
+        sTimeCareFivth = createAnimal.textFieldTimeCareFivth.getText();
+        sStatus = createAnimal.textStatus.getText();
+        iStatusWay = createAnimal.comboBoxStatusWay.getSelectedIndex();
+        iFood = createAnimal.comboBoxFood.getSelectedIndex();
     }
 
 

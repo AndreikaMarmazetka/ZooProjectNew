@@ -1,7 +1,7 @@
-package Model.Connect.load;
+package DAO.Connect.load;
 
-import Model.Connect.ConnectionBD;
-import Model.Connect.Query;
+import DAO.Connect.ConnectionBD;
+import DAO.Connect.Query;
 import Model.create.objects.CreateAnimalAndPaddook;
 import Model.create.objects.TimingBox;
 import Model.objects.Lists.*;

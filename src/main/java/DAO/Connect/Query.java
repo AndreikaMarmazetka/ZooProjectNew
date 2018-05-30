@@ -1,4 +1,4 @@
-package Model.Connect;
+package DAO.Connect;
 
 import java.sql.Time;
 

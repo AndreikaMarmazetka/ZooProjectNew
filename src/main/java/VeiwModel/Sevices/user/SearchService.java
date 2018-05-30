@@ -1,6 +1,6 @@
-package Sevices.user;
+package VeiwModel.Sevices.user;
 
-import Model.Connect.ConnectionBD;
+import DAO.Connect.ConnectionBD;
 
 public class SearchService {
 

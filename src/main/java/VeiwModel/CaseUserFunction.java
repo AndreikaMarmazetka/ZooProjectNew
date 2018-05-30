@@ -1,8 +1,9 @@
 package VeiwModel;
 
 
-import Model.services.users.*;
-import Sevices.user.*;
+//import Model.services.users.*;
+
+import VeiwModel.Sevices.user.*;
 import View.CreateAnimal;
 import View.CreatePaddook;
 
@@ -28,12 +29,11 @@ public class CaseUserFunction extends ObjectInOutWindow {
             }
             case 5: {
                 CreateAnimalService cas = CreateAnimalService.getInstance();
-                cas.createAnimal(iType, Integer.parseInt(sCost), iEnviroment, iPaddook, sTime1, sTime2, sTime3, sTime4, sTime5, sStatus, iStatusWay, iFood);
+                cas.createAnimal(iType, Integer.parseInt(sCost), iEnviroment, iPaddook, sTimeCareFirst, sTimeCareSecond, sTimeCareThird, sTimeCareFouth, sTimeCareFivth, sStatus, iStatusWay, iFood);
             }
             case 6: {
                 CreatePaddookService cps = CreatePaddookService.getInstance();
                 CreatePaddookTypeService cpts = CreatePaddookTypeService.getInstance();
-                new BindValues().bindValueCreatePaddook();
                 cpts.Create(sPaddookType);
                 cps.Create(iType, iFood, bDagerous);
             }

@@ -1,4 +1,4 @@
-package Sevices.auto;
+package VeiwModel.Sevices.auto;
 
 public class ChangeStatusWay {
     private static ChangeStatusWay ourInstance = new ChangeStatusWay();

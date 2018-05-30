@@ -1,7 +1,7 @@
-package Model.Connect.create;
+package DAO.Connect.create;
 
-import Model.Connect.ConnectionBD;
-import Model.Connect.Query;
+import DAO.Connect.ConnectionBD;
+import DAO.Connect.Query;
 import Model.create.objects.AnimalBox;
 import Model.create.objects.PaddookBox;
 import Model.objects.Animal;

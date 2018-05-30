@@ -1,4 +1,4 @@
-package Sevices.user;
+package VeiwModel.Sevices.user;
 
 public class ReservationService {
     private static ReservationService ourInstance = new ReservationService();
