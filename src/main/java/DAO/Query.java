@@ -36,7 +36,9 @@ public class Query {
     public static String addPaddookType;
 
     public void createAddAnimalQuery(int id, int type, int cost, int environment, int paddook, int timing, String status, int status_way, int food) {
-        addAnimal = "insert into Animals (" + id + ", " + type + ", " + cost + ", " + environment + ", " + paddook + ", " + timing + ", " + status + ", " + status_way + ", " + food + ") values";
+        addAnimal = "insert into public.\"Animals\" ( id ,  type ,  cost ,  environment ,  paddook" +
+                ",  timing ,  status ,  status_way ,  food ) values (" + id + ", " + type + ", " + cost + ", " + environment + ", "
+                + paddook + ", " + timing + ", '" + status + "', " + status_way + ", " + food + " )";
     }
 
     public void createAddPaddookQuery(int id, int paddook_type, int food, boolean dangerous) {
@@ -45,11 +47,13 @@ public class Query {
     }
 
     public void createAddAnimalTypeQuery(int id, String type) {
-        addAnimalType = "insert into AnimalTypes (" + id + ", " + type + ") values ";
+        addAnimalType = "insert into public.\"AnimalTypes\"" +
+                "'( id ,  type ) values (" + id + ", " + type + ")";
     }
 
     public void createAddTiming(int id, Time o, Time t, Time tr, Time fo, Time fi) {
-        addTiming = "insert into Timing (" + id + ", " + o + ", " + t + ", " + tr + ", " + fo + ", " + fi + ") values ";
+        addTiming = "insert into Timing ( id ,  First ,  Second ,  Third ,  Fourth ,  Fifth ) " +
+                "values (" + id + ", " + o + ", " + t + ", " + tr + ", " + fo + ", " + fi + ")";
     }
 
     public void createAddPaddookTypeQuery(int id, String type) {
