@@ -30,6 +30,22 @@ public class CreateBDObject {
         }
     }
 
+    public void CreateAnimal() {
+        java.sql.Statement st;
+        {
+            try {
+                connectionBD.Connect();
+                st = connectionBD.getConnection().createStatement();
+                System.out.println(Query.addAnimal);
+                System.out.println(Query.addAnimalType);
+                st.executeUpdate(Query.addAnimalType);
+                st.executeUpdate(Query.addAnimal);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
 
     public void createAnimalBD(int type, int cost, int enviroment, int padook, int timing, String status, int status_way, int food) {
         AnimalBox ab = AnimalBox.getInstance();
@@ -49,6 +65,7 @@ public class CreateBDObject {
     }
 
     public void createPaddookBD(int type, int food, boolean dengerous) {
+        System.out.println(type);
         PaddookBox pb = PaddookBox.getInstance();
         query.createAddPaddookQuery(pb.getSizeList(), type, food, dengerous);
     }

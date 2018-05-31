@@ -36,7 +36,7 @@ public class Query {
     public static String addPaddookType;
 
     public void createAddAnimalQuery(int id, int type, int cost, int environment, int paddook, int timing, String status, int status_way, int food) {
-        addAnimal = "insert into public.\"Animals\" ( id ,  type ,  cost ,  environment ,  paddook" +
+        addAnimal = "insert into public.\"Animal\" ( id ,  type ,  cost ,  environment ,  paddook" +
                 ",  timing ,  status ,  status_way ,  food ) values (" + id + ", " + type + ", " + cost + ", " + environment + ", "
                 + paddook + ", " + timing + ", '" + status + "', " + status_way + ", " + food + " )";
     }
@@ -47,12 +47,12 @@ public class Query {
     }
 
     public void createAddAnimalTypeQuery(int id, String type) {
-        addAnimalType = "insert into public.\"AnimalTypes\"" +
-                "'( id ,  type ) values (" + id + ", " + type + ")";
+        addAnimalType = "insert into public.\"AnimalType\"" +
+                "'( id ,  type ) values (" + id + ", '" + type + "')";
     }
 
     public void createAddTiming(int id, Time o, Time t, Time tr, Time fo, Time fi) {
-        addTiming = "insert into Timing ( id ,  First ,  Second ,  Third ,  Fourth ,  Fifth ) " +
+        addTiming = "insert into public.\"timing\" ( id ,  First ,  Second ,  Third ,  Fourth ,  Fifth ) " +
                 "values (" + id + ", " + o + ", " + t + ", " + tr + ", " + fo + ", " + fi + ")";
     }
 
@@ -62,9 +62,7 @@ public class Query {
 
     //------------------------------Update---------------------------
 
-    final static public String updateStatusWay = "update Animal set status_way=";
-    //final static public String updateAnimal
-    //final static public String updatePaddook
+
 
 
 }

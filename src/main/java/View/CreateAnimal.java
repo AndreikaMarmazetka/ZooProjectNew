@@ -15,7 +15,6 @@ public class CreateAnimal extends JDialog {
     public JTextField textFieldCost;
     public JComboBox comboBoxEnviroment;
     public JComboBox comboBoxPaddook;
-    public JTextField textFieldPadook;
     public JButton createButtonPaddook;
     public JTextField textFieldTimeCareFirst;
     public JTextField textFieldTimeCareSecond;
@@ -63,7 +62,7 @@ public class CreateAnimal extends JDialog {
 
     private void onOK() {
         new BindValues().bindValueCreateAnimal(this);
-        new CaseUserFunction().setNumberFunction(5);
+        new CaseUserFunction().setNumberFunction(13);
         dispose();
     }
 

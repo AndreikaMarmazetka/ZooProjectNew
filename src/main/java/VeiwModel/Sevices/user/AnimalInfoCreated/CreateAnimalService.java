@@ -27,11 +27,16 @@ public class CreateAnimalService {
         t.setFifth(StringtoTime(timing5));
         new CreateAnimalAndPaddook().createAnimal(AnimalType.getInstance().getAnimalTypeList(type), cost,
                 Enviroments.getInstance().getListEnvironment(enviroment),
-                PaddookBox.getInstance().getListPaddook(padook).getType(), StringtoTime(timing1), StringtoTime(timing2), StringtoTime(timing3), StringtoTime(timing4),
+                PaddookBox.getInstance().getListPaddook(padook).getType(), StringtoTime(timing1),
+                StringtoTime(timing2), StringtoTime(timing3), StringtoTime(timing4),
                 StringtoTime(timing5),
                 status, StatusWay.getInstance().getStatusesList(status_way), Food.getInstance().getFoodList(food)
         );
-        new CreateBDObject().createAnimalBD(type, cost, enviroment, padook, TimingBox.getInstance().getSizeList() - 1, status, status_way, food);
+        new CreateBDObject().createAnimalBD(type, cost, enviroment+1, padook+1,
+                TimingBox.getInstance().getSizeList() - 1, status, status_way+1, food+1);
+
+        new CreateBDObject().CreateAnimal();
+        System.out.println("okcreateAnimal");
     }
 
     public Time StringtoTime(String str) {

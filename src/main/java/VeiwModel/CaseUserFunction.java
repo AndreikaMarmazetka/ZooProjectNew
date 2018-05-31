@@ -3,6 +3,7 @@ package VeiwModel;
 
 //import Model.services.users.*;
 
+import Model.objects.Lists.PaddookType;
 import Model.objects.Lists.Types;
 import VeiwModel.Sevices.user.*;
 import VeiwModel.Sevices.user.AnimalInfoCreated.CreateAnimalService;
@@ -32,16 +33,30 @@ public class CaseUserFunction extends ObjectInOutWindow {
             case 4: {
                 ReservationService rs = new ReservationService();
             }
-            case 5: {
+            case 13: {
                 CreateAnimalService cas = new CreateAnimalService();
-                new CreateTypeService().Create(sType);
-                cas.createAnimal(iType, Integer.parseInt(sCost), iEnviroment, iPaddook, sTimeCareFirst, sTimeCareSecond, sTimeCareThird, sTimeCareFouth, sTimeCareFivth, sStatus, iStatusWay, iFood);
+                if ( iType == 0) {
+                    new CreateTypeService().Create(sType);
+                    iType = Types.getInstance().getSizeList()-1;
+                    System.out.println("if");
+                }
+                    cas.createAnimal(iType, Integer.parseInt(sCost), iEnviroment, iPaddook, sTimeCareFirst, sTimeCareSecond,
+                            sTimeCareThird, sTimeCareFouth, sTimeCareFivth, sStatus, iStatusWay, iFood);
+                    System.out.println("else");
+
             }
             case 6: {
-                CreatePaddookService cps = new CreatePaddookService();
-                CreatePaddookTypeService cpts = new CreatePaddookTypeService();
-                cpts.Create(sPaddookType);
-                cps.Create(Types.getInstance().getSizeList(), iFood, bDagerous);
+                if(sPaddookType.equals("")){
+                    System.out.println("if6");
+                }
+                else {
+                    System.out.println("else6");
+                    CreatePaddookService cps = new CreatePaddookService();
+                    CreatePaddookTypeService cpts = new CreatePaddookTypeService();
+                    cpts.Create(sPaddookType);
+                    cps.create(PaddookType.getInstance().getSizeList() - 1, iFood, bDagerous);
+                }
+
             }
 
             }

@@ -25,7 +25,7 @@ public class BindValues extends ObjectInOutWindow{
         sCost = createAnimal.textFieldCost.getText();
         iEnviroment = createAnimal.comboBoxEnviroment.getSelectedIndex();
         iPaddook = createAnimal.comboBoxPaddook.getSelectedIndex();
-        sPaddookType = createAnimal.textFieldPadook.getText();
+       sPaddookType = "";
         sTimeCareFirst = createAnimal.textFieldTimeCareFirst.getText();
         sTimeCareSecond = createAnimal.textFieldTimeCareSecond.getText();
         sTimeCareThird = createAnimal.textFieldTimeCareThird.getText();

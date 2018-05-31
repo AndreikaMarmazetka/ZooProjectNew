@@ -9,12 +9,13 @@ import Model.objects.Lists.Types;
 public class CreatePaddookService {
 
 
-    public void Create(int type, int food, boolean dengerous) {
+    public void create(int type, int food, boolean dengerous) {
         CreateAnimalAndPaddook createAnimalAndPaddook = new CreateAnimalAndPaddook();
         createAnimalAndPaddook.createPaddook(PaddookType.getInstance().getListTypePaddook(type),
                 Food.getInstance().getFoodList(food), dengerous);
-        int k = Types.getInstance().getSizeList();
+        int k = PaddookType.getInstance().getSizeList();
         new CreateBDObject().createPaddookBD(k, food+1, dengerous);
+       // System.out.println( type);
         new CreateBDObject().CreatePaddok();
 
     }
