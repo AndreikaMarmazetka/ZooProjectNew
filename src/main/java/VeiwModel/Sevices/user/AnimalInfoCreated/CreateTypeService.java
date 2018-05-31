@@ -1,5 +1,6 @@
 package VeiwModel.Sevices.user.AnimalInfoCreated;
 
+import DAO.create.CreateBDObject;
 import Model.objects.Lists.Types;
 
 public class CreateTypeService {
@@ -8,6 +9,8 @@ public class CreateTypeService {
         } else {
             Types types = Types.getInstance();
             types.addListTypes(str);
+            CreateBDObject createBDObject = new CreateBDObject();
+            createBDObject.createAnimalTypeBD(str);
         }
     }
 }

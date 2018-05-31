@@ -36,9 +36,9 @@ public class CreateBDObject {
         query.createAddAnimalQuery(ab.getSizeList(), type, cost, enviroment, padook, timing, status, status_way, food);
     }
 
-    public void createAnimalTypeBD(Animal animal) {
+    public void createAnimalTypeBD(String type) {
         AnimalType at = AnimalType.getInstance();
-        query.createAddAnimalTypeQuery(at.getSizeList(), animal.getType());
+        query.createAddAnimalTypeQuery(at.getSizeList(), type);
     }
 
     public void createTimingBD(Animal animal) {
